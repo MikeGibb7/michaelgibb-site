@@ -19,7 +19,7 @@ const experiences: Experience[] = [
     role: 'Intern Developer',
     company: 'Jamieson Wellness',
     description:
-      'Contributed to software development projects, improving internal tools and automating processes to support product development.',
+      'Contributed to software development projects, improving internal tools and automating processes to support product development. Worked with a development team and consultants to implement new SAP data system along with orchastrating the migration of data from legacy systems.',
   },
   {
     role: 'Junior Analyst → Junior Developer → Senior Developer',
@@ -64,6 +64,34 @@ const projects: Project[] = [
     url: 'https://finbud.ca/',
     imageUrl: '/images/finbud.png',
   },
+  {
+    title: 'JSOSIF Website',
+    description:
+      'The JSOSIF website serves as a platform for the John Simpson Odette Student Investment Fund, showcasing the fund\'s mission, team, and investment strategies.',
+    url: 'https://www.jsosif.com/',
+    imageUrl: '/images/jsosif.png',
+  },
+];
+
+type Competition = {
+  name: string;
+  description: string;
+  url?: string;
+};
+
+const competitions: Competition[] = [
+  {
+    name: 'ICPC Programming Contest',
+    description:
+      'Participated in the International Collegiate Programming Contest, solving algorithmic problems under time constraints in a team-based competitive environment.',
+    url: 'https://icpc.global/',
+  },
+  {
+    name: 'Rotman International Trading Competition',
+    description:
+      'Competed in the Rotman International Trading Competition, engaging in simulated trading cases to test quantitative, analytical, and decision-making skills.',
+    url: 'https://ritc.rotman.utoronto.ca/',
+  },
 ];
 
 export default function HomePage() {
@@ -74,7 +102,7 @@ export default function HomePage() {
       </h1>
       <p className="text-lg max-w-xl text-center mb-8">
         I&apos;m a Computer Science student at the University of Windsor,
-        passionate about web development, finance, and quantitative trading.
+        passionate about software development, finance, and quantitative trading.
       </p>
       <div className="flex space-x-4 mb-12">
         <a
@@ -116,7 +144,7 @@ export default function HomePage() {
       </section>
 
       {/* Projects Section */}
-      <section className="w-full max-w-4xl">
+      <section className="w-full max-w-4xl mb-16">
         <h2 className="text-3xl font-semibold mb-6 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
           {projects.map(({ title, description, url, imageUrl }) => (
@@ -128,18 +156,46 @@ export default function HomePage() {
               className="group block p-6 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300"
             >
               {imageUrl && (
-                <img
-                  src={imageUrl}
-                  alt={`${title} screenshot`}
-                  className="mb-4 w-full h-40 object-cover rounded-md"
-                  loading="lazy"
-                />
+                <div className="w-full h-40 flex items-center justify-center bg-gray-100 rounded-md">
+                  <img
+                    src={imageUrl}
+                    alt={`${title} screenshot`}
+                    className="max-h-full max-w-full object-contain"
+                    loading="lazy"
+                  />
+                </div>
               )}
               <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
                 {title}
               </h3>
               <p className="text-gray-700 dark:text-gray-300">{description}</p>
             </a>
+          ))}
+        </div>
+      </section>
+      {/* Competitions Section */}
+      <section className="w-full max-w-4xl mb-16">
+        <h2 className="text-3xl font-semibold mb-6 text-center">Competitions</h2>
+        <div className="space-y-8">
+          {competitions.map(({ name, description, url }) => (
+            <div key={name} className="p-6 border border-gray-300 rounded-lg bg-white dark:bg-gray-800">
+              <h3
+                className={`text-xl font-bold mb-2 ${
+                  url
+                    ? 'text-blue-600 dark:text-blue-400 hover:underline'
+                    : ''
+                }`}
+              >
+                {url ? (
+                  <a href={url} target="_blank" rel="noopener noreferrer">
+                    {name}
+                  </a>
+                ) : (
+                  name
+                )}
+              </h3>
+              <p className="text-gray-700 dark:text-gray-300">{description}</p>
+            </div>
           ))}
         </div>
       </section>
