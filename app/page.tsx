@@ -71,6 +71,13 @@ const projects: Project[] = [
     url: 'https://www.jsosif.com/',
     imageUrl: '/images/jsosif.png',
   },
+  {
+    title: 'Bird Game',
+    description:
+      'An arcade-style Flappy Bird–esque game with my twist: multiple objects to dodge, a scoring system. Built using Unity and C# for mobile phones - Not currently live, but scripts available on GitHub.',
+    url: 'https://github.com/MikeGibb7/FlyingBirdGame', // replace with your live URL
+    imageUrl: '/images/bird-game.png',        // replace with your thumbnail path
+  },
 ];
 
 type Competition = {
