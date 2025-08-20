@@ -1,10 +1,12 @@
 // app/page.tsx
+import Slideshow from "./components/Slideshow";
 
 type Project = {
   title: string;
   description: string;
   url: string;
-  imageUrl?: string;  // optional image
+  imageUrl?: string;       // keep single optional
+  imageUrls?: string[];    // allow multiple
 };
 
 type Experience = {
@@ -63,6 +65,18 @@ const projects: Project[] = [
       'FinBud is an innovative platform designed to simplify personal finance for young people. It offers an easy-to-use interface that guides users through their financial journey with step-by-step instructions.',
     url: 'https://finbud.ca/',
     imageUrl: '/images/finbud.png',
+  },
+  {
+    title: 'Tournament Generator App',
+    description:
+      'An Android application built using Android Studio in Kotlin that allows users to create and manage tournaments. Users can create tournaments, add participants, and track scores of a round robin style tournament, leading up to a final bracket with a winner.',
+    url: 'https://github.com/MikeGibb7/TourneyGeneratorApp',
+    imageUrls: [
+      '/images/tournament-main.png',
+      '/images/tournament-matches.png',
+      '/images/tournament-bracket.png',
+      '/images/tournament-winner.png'
+    ]
   },
   {
     title: 'JSOSIF Website',
@@ -154,7 +168,7 @@ export default function HomePage() {
       <section className="w-full max-w-4xl mb-16">
         <h2 className="text-3xl font-semibold mb-6 text-center">Projects</h2>
         <div className="grid gap-8 md:grid-cols-2">
-          {projects.map(({ title, description, url, imageUrl }) => (
+          {projects.map(({ title, description, url, imageUrl, imageUrls }) => (
             <a
               key={title}
               href={url}
@@ -162,7 +176,9 @@ export default function HomePage() {
               rel="noopener noreferrer"
               className="group block p-6 border border-gray-300 rounded-lg bg-white dark:bg-gray-800 shadow-sm hover:shadow-lg transform hover:-translate-y-1 hover:scale-[1.02] transition-all duration-300"
             >
-              {imageUrl && (
+              {imageUrls ? (
+                <Slideshow images={imageUrls} />
+              ) : imageUrl ? (
                 <div className="w-full h-40 flex items-center justify-center bg-gray-100 rounded-md">
                   <img
                     src={imageUrl}
@@ -171,7 +187,7 @@ export default function HomePage() {
                     loading="lazy"
                   />
                 </div>
-              )}
+              ) : null}
               <h3 className="text-xl font-bold mb-2 group-hover:text-blue-600 transition-colors">
                 {title}
               </h3>
