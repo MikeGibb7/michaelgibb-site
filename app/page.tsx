@@ -123,7 +123,7 @@ export default function HomePage() {
       </h1>
       <p className="text-lg max-w-xl text-center mb-8">
         I&apos;m a Computer Science student at the University of Windsor,
-        passionate about software development, finance, and quantitative trading.
+        passionate about software development, finance, cybersecurity, and quantitative trading.
       </p>
       <div className="flex space-x-4 mb-12">
         <a
