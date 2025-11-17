@@ -24,7 +24,7 @@ const experiences: Experience[] = [
       'Contributed to software development projects, improving internal tools and automating processes to support product development. Worked with a development team and consultants to implement new SAP data system along with orchastrating the migration of data from legacy systems.',
   },
   {
-    role: 'Junior Analyst → Junior Developer → Senior Developer',
+    role: 'Junior Analyst → Junior Developer → Senior Developer → Lead Developer',
     company: 'JSOSIF — John Simpson Odette Student Investment Fund',
     description:
       'Progressed through roles contributing to investment analysis, software development, and project leadership.',
