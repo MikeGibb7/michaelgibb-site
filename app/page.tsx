@@ -118,7 +118,7 @@ const competitions: Competition[] = [
 export default function HomePage() {
   return (
     <main className="flex flex-col items-center justify-center min-h-screen p-8 bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
-      <h1 className="text-5xl font-extrabold mb-6">
+      <h1 className="text-5xl font-extrabold mb-6 text-center">
         Welcome to Michael Gibb&apos;s Website
       </h1>
       <p className="text-lg max-w-xl text-center mb-8">
