@@ -320,7 +320,7 @@ export default function HomePage() {
               </a>
 
               <a
-                href="https://www.linkedin.com/in/michael-gibb/"
+                href="https://www.linkedin.com/in/michael-e-gibb/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center space-x-1.5 px-3 py-1.5 rounded-lg glass-pill hover:text-sky-300 hover:border-sky-500/30 transition-colors"
@@ -879,7 +879,7 @@ export default function HomePage() {
                 </button>
 
                 <a
-                  href="https://www.linkedin.com/in/michael-gibb/"
+                  href="https://www.linkedin.com/in/michael-e-gibb/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="px-4 py-2.5 rounded-xl font-semibold text-xs sm:text-sm text-slate-200 glass-card hover:bg-slate-800/90 border border-white/10 hover:border-slate-500/40 flex items-center space-x-2 transition-all duration-200"

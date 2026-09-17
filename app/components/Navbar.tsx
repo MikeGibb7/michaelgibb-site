@@ -79,7 +79,7 @@ export default function Navbar() {
             <span>GitHub</span>
           </a>
           <a
-            href="https://www.linkedin.com/in/michael-gibb/"
+            href="https://www.linkedin.com/in/michael-e-gibb/"
             target="_blank"
             rel="noopener noreferrer"
             title="LinkedIn Profile"
@@ -132,7 +132,7 @@ export default function Navbar() {
               <span>GitHub</span>
             </a>
             <a
-              href="https://www.linkedin.com/in/michael-gibb/"
+              href="https://www.linkedin.com/in/michael-e-gibb/"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center justify-center space-x-1.5 px-3 py-2 text-xs font-semibold text-slate-200 bg-slate-800 rounded-lg border border-slate-700"
